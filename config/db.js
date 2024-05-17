@@ -2,13 +2,13 @@ import pg from 'pg';
 import 'dotenv/config'
 const { Pool } = pg;
 
-
+const { DB_USER, DB_HOST, DB_DATABASE, DB_PASSWORD } = process.env
 
 const config = {
-    user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    database: process.env.DB_DATABASE,
-    password: process.env.DB_PASSWORD,
+    user: DB_USER,
+    host: DB_HOST,
+    database: DB_DATABASE,
+    password: DB_PASSWORD,
    allowExitOnIdle: true
 }
 
